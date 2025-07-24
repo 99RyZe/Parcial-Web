@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Mi Sitio Web Personal</title>
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="projects.html">Proyectos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="#" method="post" aria-describedby="form-ayuda" autocomplete="on">
+            <fieldset>
+                <legend>Información de contacto</legend>
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" aria-describedby="nombre-ayuda">
+                    <small id="nombre-ayuda">Este campo es obligatorio.</small>
+                </div>
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@email.com" aria-describedby="email-ayuda">
+                    <small id="email-ayuda">Introduce un correo válido.</small>
+                </div>
+                <div>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required placeholder="Motivo del mensaje" aria-describedby="asunto-ayuda" pattern=".{5,50}">
+                    <small id="asunto-ayuda">Entre 5 y 50 caracteres.</small>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3001234567" pattern="[0-9]{10}" aria-describedby="tel-ayuda">
+                    <small id="tel-ayuda">10 dígitos, solo números.</small>
+                </div>
+                <div>
+                    <label for="web">Sitio web:</label>
+                    <input type="url" id="web" name="web" placeholder="https://tusitio.com" aria-describedby="web-ayuda">
+                    <small id="web-ayuda">Opcional. Incluye https://</small>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Mensaje</legend>
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..." aria-describedby="mensaje-ayuda"></textarea>
+                    <small id="mensaje-ayuda">Este campo es obligatorio.</small>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Preferencias de contacto</legend>
+                <div>
+                    <label for="motivo">Motivo de contacto:</label>
+                    <select id="motivo" name="motivo" required aria-describedby="motivo-ayuda">
+                        <optgroup label="Consultas">
+                            <option value="info">Información</option>
+                            <option value="soporte">Soporte</option>
+                        </optgroup>
+                        <optgroup label="Colaboraciones">
+                            <option value="propuesta">Propuesta de proyecto</option>
+                            <option value="otro">Otro</option>
+                        </optgroup>
+                    </select>
+                    <small id="motivo-ayuda">Selecciona una opción.</small>
+                </div>
+                <div>
+                    <span id="preferencia-ayuda">¿Cómo prefieres ser contactado?</span><br>
+                    <input type="radio" id="contacto-email" name="preferencia" value="email" checked aria-describedby="preferencia-ayuda">
+                    <label for="contacto-email">Email</label>
+                    <input type="radio" id="contacto-tel" name="preferencia" value="telefono" aria-describedby="preferencia-ayuda">
+                    <label for="contacto-tel">Teléfono</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="acepto" name="acepto" required aria-describedby="acepto-ayuda">
+                    <label for="acepto">Acepto la política de privacidad</label>
+                    <small id="acepto-ayuda">Debes aceptar para enviar el formulario.</small>
+                </div>
+            </fieldset>
+            <div>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </div>
+            <p id="form-ayuda">Todos los campos marcados como obligatorios deben ser completados correctamente.</p>
+        </form>
+    </main>
+</body>
+</html>
